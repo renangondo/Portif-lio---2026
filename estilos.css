@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+.container-principal {
+  
+}
+
+header {
+    position: fixed;
+    background-color: aquamarine;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100%;
+  
+}
+
+.header-nome {
+
+    
+}
+
+.menu {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-left: 5rem;
+
+}
