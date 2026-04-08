@@ -5,6 +5,7 @@
     <title>Meu Portifolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="estilos.css" rel="stylesheet">
 </head>
 
@@ -31,7 +32,10 @@
                     est soluta vero consequatur optio repudiandae quia repellendus a tempore cupiditate repellat
                     blanditiis
                     saepe tenetur laborum ipsum.</p>
-                <button>Fale Comigo</button>
+                <a href="#contatos">
+                    <button>Fale Comigo</button>
+                </a>
+
             </div>
             <img src="img/foto-perfil.png" alt="Minha-Foto" class="foto-perfil">
         </div>
@@ -82,6 +86,26 @@
 
                 </div>
             </div>
+
+            <div class="jornada-educacao">
+                <h3>Profissão</h3>
+
+                <div class="timeline">
+
+                    <div class="card">
+                        <span class="data">2010 - 2018</span>
+                        <h3>Ensino Médio - Fundação Bradesco</h3>
+                        <p>Efetuei todo o meu ensino médio na escola Fundação Bradesco...</p>
+                    </div>
+
+                    <div class="card">
+                        <span class="data">2019 - 2026</span>
+                        <h3>Faculdade - IFPR</h3>
+                        <p>Curso de Engenharia de Software...</p>
+                    </div>
+
+                </div>
+            </div>
         </div>
         <!-- PAGINA DE HABILIDADES -->
         <div id="habilidades">
@@ -90,38 +114,38 @@
 
             <div class="container-habilidades">
 
-                <div card-habilidades>
-                    <img src="img/IconeHtml.png" alt="Icone Html" class="img-habilidades">
+                <div class="card-habilidades">
+                    <img src="img/htmlIcon.png" alt="Icone Html" class="img-habilidades">
                     <p>Linguagem de marcação utilizada para estruturar páginas web, organizando conteúdos como textos,
                         imagens e links.</p>
                 </div>
 
-                <div card-habilidades>
+                <div class="card-habilidades">
                     <img src="img/cssIcone.png" alt="Icone CSS" class="img-habilidades">
                     <p>Responsável pela estilização das páginas, permitindo criar layouts modernos, responsivos e
                         visualmente atraentes.</p>
                 </div>
 
-                <div card-habilidades>
+                <div class="card-habilidades">
                     <img src="img/jsIcone.png" alt="Icone JS" class="img-habilidades">
                     <p>Linguagem de programação que adiciona interatividade às páginas web, manipulando eventos, dados e
                         elementos em tempo real.</p>
                 </div>
 
-                <div card-habilidades>
+                <div class="card-habilidades">
                     <img src="img/React-icon.svg.png" alt="Icone React" class="img-habilidades">
                     <p>Framework web em Python que facilita a criação de aplicações robustas, seguras e escaláveis,
                         seguindo
                         o padrão MVT..</p>
                 </div>
 
-                <div card-habilidades>
-                    <img src="img/pythonIcone.jpeg" alt="Icone Python" class="img-habilidades">
+                <div class="card-habilidades">
+                    <img src="img/pythonIcone.png" alt="Icone Python" class="img-habilidades">
                     <p>Linguagem versátil e de fácil leitura, utilizada para desenvolvimento backend, automações e
                         manipulação de dados.</p>
                 </div>
 
-                <div card-habilidades>
+                <div class="card-habilidades">
                     <img src="img/djIcone.png" alt="Icone Django" class="img-habilidades">
                     <p>Framework web em Python que facilita a criação de aplicações robustas, seguras e escaláveis,
                         seguindo
@@ -131,33 +155,55 @@
         </div>
         <!-- PAGINA DE Projetos -->
         <div id="projetos">
-
+            <h1>PROJETOS</h1>
         </div>
         <!-- PAGINA de contatos -->
         <div id="contatos">
-            <input placeholder="Seu nome">
-            <input placeholder="E-mail">
-            <input placeholder="Celular">
-            <input placeholder="Sua mensagem">
-            <button>Enviar</button>
+            <h1>Contato</h1>
+
+            <form class="form-contato">
+                <div class="linha">
+                    <input type="text" placeholder="Seu nome">
+                    <input type="email" placeholder="E-mail">
+                </div>
+
+                <div class="linha">
+                    <input type="text" placeholder="Celular">
+                    <input type="email" placeholder="Assunto">
+
+                </div>
+
+                <textarea placeholder="Sua mensagem"></textarea>
+
+                <button>Enviar</button>
+
+            </form>
         </div>
         <!-- RODAPÉ -->
 
         <footer class="footer">
-            <div class="icones-sociais">
-                <a href="https://www.facebook.com/renan.gondo/" target="_blank" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://github.com/renangondo" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.instagram.com/renan_gondo/" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/renan-gondo-a137a02b7/" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
+
+            <div class="footer-container">
+
+                <h2 class="footer-nome">Renan Gondo</h2>
+                <p class="footer-desc">Desenvolvedor em ascenssão</p>
+
+                <div class="icones-sociais">
+                    <a href="https://www.facebook.com/renan.gondo/" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://github.com/renangondo" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/renan_gondo/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/renan-gondo-a137a02b7/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
             </div>
+
             <p class="copyright">© 2025 Renan Gondo. Todos os direitos reservados.</p>
         </footer>
 
