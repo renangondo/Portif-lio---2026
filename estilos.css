@@ -54,14 +54,15 @@ header {
 /*##################CONTEUDO HOME#################################*/
 
 #home {
-    width: 100%;
-    background-color: black;
+    height: 100vh;
+    background-color: #0b1d26;
     color: aliceblue;
-    padding: 150px 100px;
+    padding: 0 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 100vh;
+    overflow: hidden;
+
 }
 
 .conteudo-home {
@@ -76,11 +77,16 @@ header {
 }
 
 .foto-perfil {
-    max-width: 600px;
+    width: 603px;
     height: auto;
-    border-radius: 15%;
-    margin-left: 100px;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    filter: brightness(0.7);
+    border-radius: 14%;
 }
+
+
 
 .conteudo-home h2 {
     font-size: 3rem;
@@ -96,7 +102,7 @@ header {
     padding-bottom: 50px;
 }
 
-.conteudo-home button {
+.contato-button {
     background-color: aquamarine;
     color: black;
     padding: 15px 30px;
@@ -108,8 +114,25 @@ header {
     transition: background-color 0.3s ease;
 }
 
-.conteudo-home button:hover {
+.contato-button:hover {
     background-color: #5fd4d4;
+    transform: scale(1.05);
+}
+
+.contato-home {
+    display: flex;
+    align-items: center;
+}
+
+.icones-home {
+    margin-left: 30px;
+    font-size: 30px;    
+    color: #00bcd4;
+    transition: 0.3s;
+}
+
+.icones-home:hover {
+    transform: scale(1.3);
 }
 
 /*###################SOBRE#################################*/
