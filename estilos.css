@@ -1,3 +1,12 @@
+:root {
+    --bg-principal: #0b1d26;
+    --bg-secundario: #112d3b;
+    --cor-primaria: #00bcd4;
+    --cor-hover: #00e5ff;
+    --texto-principal: #ffffff;
+    --texto-secundario: #cccccccc;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -13,20 +22,24 @@
 
 }
 
-body {}
+body {
+    color: var(--texto-principal);
+}
 
 .container-principal {}
 
 header {
+
     position: fixed;
-    background-color: aquamarine;
     top: 0;
-    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100%;
+    padding: 20px 60px;
+    background: rgba(11, 29, 38, 0, 8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
 
 }
 
@@ -48,7 +61,23 @@ header {
 }
 
 .link-menu {
-    padding: 10px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.link-menu:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--cor-primaria);
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.link-menu:hover:after {
+    width: 100%;
 }
 
 /*##################CONTEUDO HOME#################################*/
@@ -63,6 +92,16 @@ header {
     align-items: center;
 }
 
+#home:before {
+    content: "";
+    position: relative;
+    inset: 0;
+
+    background: linear-gradient(to right,
+            var(--bg-principal) 60%,
+            rgba(11, 29, 38, 0.6));
+}
+
 .conteudo-home {
     flex: 1;
     max-width: 60%;
@@ -75,10 +114,13 @@ header {
 }
 
 .foto-perfil {
-    width: 603px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 14%;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0,188,212,0.3);
+    transition: 0.3s;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.03);
 }
 
 
@@ -86,14 +128,12 @@ header {
 .conteudo-home h2 {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #ccc;
 }
 
 .conteudo-home p {
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 30px;
-    color: #ddd;
     padding-bottom: 50px;
 }
 
@@ -135,13 +175,12 @@ header {
 #sobre {
     padding: 50px 30px;
     text-align: center;
-    background-color: #f8f8f8;
+    background-color: var(--bg-secundario);
 }
 
 .titulo-sobre {
     font-size: 3rem;
     margin-bottom: 30px;
-    color: #333;
 }
 
 .foto-sobre {
@@ -157,13 +196,12 @@ header {
 .subtitulo-sobre {
     font-size: 2rem;
     margin: 30px 0 20px 0;
-    color: #555;
+
 }
 
 .paragrafo-sobre {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #666;
     max-width: 800px;
     margin: 0 auto;
     text-align: justify;
@@ -295,7 +333,6 @@ header {
     background-color: #112d3b;
     border-radius: 10px;
     padding: 15px;
-    color: white;
     scroll-snap-align: start;
 }
 
@@ -324,11 +361,10 @@ header {
     align-items: center;
     padding: 50px;
     background-color: #0b1d26;
-    color: white;
+ 
 }
 
 #contatos h1 {
-    color: white;
     margin-bottom: 20px;
 }
 
@@ -350,7 +386,6 @@ header {
     border: 2px solid #00bcd4;
     border-radius: 8px;
     background-color: transparent;
-    color: white;
     font-size: 15px;
     outline: none;
     transition: 0.3s;
@@ -406,7 +441,6 @@ header {
 
 .footer-desc {
     font-size: 14px;
-    color: #ccc;
     margin-bottom: 20px;
 }
 
