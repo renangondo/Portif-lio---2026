@@ -35,4 +35,23 @@ const observer = new IntersectionObserver((entries) => {
 
 elementos.forEach(el => observer.observe(el));
 
+// WhatsAPP
+
+function enviarWhatsApp(event) {
+    event.preventDefault()
+
+    const nome = document.getElementById('nome').value;
+    const mensagem = document.getElementById('mensagem');
+    const telefone = "5544998344855"
+
+    const texto = `Olá! me chamo ${nome}, ${mensagem}`
+    const msgFormatada = encodeURIComponent(texto)
+
+    const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+    window.open(url, '_blank')
+
+}
+
+
 

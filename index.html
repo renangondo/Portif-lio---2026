@@ -330,9 +330,9 @@
         <div id="contatos">
             <h1>Contato</h1>
 
-            <form class="form-contato animar">
+            <form class="form-contato animar" onsubmit="enviarWhatsApp(event)">
                 <div class="linha">
-                    <input type="text" placeholder="Seu nome">
+                    <input type="text" placeholder="Seu nome" id="nome">
                     <input type="email" placeholder="E-mail">
                 </div>
 
@@ -342,9 +342,9 @@
 
                 </div>
 
-                <textarea placeholder="Sua mensagem"></textarea>
+                <textarea placeholder="Sua mensagem" id="mensagem"></textarea>
 
-                <button>Enviar</button>
+                <button type="submit">Enviar</button>
 
             </form>
         </div>

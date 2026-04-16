@@ -23,6 +23,11 @@
 
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /*#######################Efeito de animaçãoooooo#################################*/
 .animar {
     opacity: 0;
@@ -44,14 +49,25 @@
     transform: translate(0, 0);
 }
 
-.animar:nth-child(1) { transition-delay: 0.1s; }
-.animar:nth-child(2) { transition-delay: 0.2s; }
-.animar:nth-child(3) { transition-delay: 0.3s; }
-.animar:nth-child(4) { transition-delay: 0.4s; }
+.animar:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.animar:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.animar:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.animar:nth-child(4) {
+    transition-delay: 0.4s;
+}
 
 /*##########################################################################################*/
 header {
-    
+
     position: fixed;
     top: 0;
     width: 100%;
@@ -137,7 +153,7 @@ header {
 
 .foto-perfil {
     border-radius: 20px;
-    box-shadow: 0 0 40px rgba(0,188,212,0.3);
+    box-shadow: 0 0 40px rgba(0, 188, 212, 0.3);
     transition: 0.3s;
 }
 
@@ -367,7 +383,7 @@ header {
     top: 50%;
     transform: translateY(-50%);
 
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
 
     border: none;
@@ -400,8 +416,9 @@ header {
     display: flex;
     gap: 25px;
     overflow-x: auto;
-    padding: 20px 40px 20px 40px; /* ← importante */
-    scroll-behavior:smooth;
+    padding: 20px 40px 20px 40px;
+    /* ← importante */
+    scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     cursor: grab;
 }
@@ -429,7 +446,7 @@ header {
 
 .card-projetos:hover {
     transform: scale(1.08);
-    box-shadow: 0 0 25px rgba(0,188,212,0.5);
+    box-shadow: 0 0 25px rgba(0, 188, 212, 0.5);
 }
 
 
@@ -469,7 +486,6 @@ header {
     align-items: center;
     padding: 50px;
     background-color: var(--bg-secundario)
- 
 }
 
 #contatos h1 {
@@ -575,4 +591,257 @@ header {
 .copyright {
     font-size: 12px;
     color: #888;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .cabecalho {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .link-menu {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .conteudo-home {
+        max-width: 100%;
+    }
+
+    .titulo-nome {
+        font-size: 40px;
+    }
+
+    .conteudo-home h2 {
+        font-size: 20px;
+    }
+
+    .foto-perfil {
+        width: 250px;
+        margin-top: 20px;
+    }
+
+    .contato-home {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 936) {
+
+    .paragrafo-sobre {
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+    .foto-sobre {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .timeline::before {
+        left: 0;
+    }
+
+    .card {
+        margin-left: 10px;
+    }
+
+    .card::before {
+        left: -10px;
+    }
+
+    .container-habilidades {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card-habilidades {
+        width: 250px;
+    }
+}
+
+@media (max-width: 936) {
+
+    .card-projetos {
+        min-width: 250px;
+    }
+
+    .btn-scroll {
+        display: none; /* remove botões no celular */
+    }
+}
+
+@media (max-width: 936) {
+
+    .linha {
+        flex-direction: column;
+    }
+
+    .form-contato {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 936) {
+
+    .footer-container {
+        padding: 0 10px;
+    }
+
+    .icones-sociais {
+        flex-wrap: wrap;
+    }
+}
+
+
+/*------------*/
+
+@media (max-width: 420) {
+
+    .cabecalho {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .link-menu {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 420) {
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .conteudo-home {
+        max-width: 100%;
+    }
+
+    .titulo-nome {
+        font-size: 40px;
+    }
+
+    .conteudo-home h2 {
+        font-size: 20px;
+    }
+
+    .foto-perfil {
+        width: 250px;
+        margin-top: 20px;
+    }
+
+    .contato-home {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 420) {
+
+    .paragrafo-sobre {
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+    .foto-sobre {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 420) {
+
+    .timeline::before {
+        left: 0;
+    }
+
+    .card {
+        margin-left: 10px;
+    }
+
+    .card::before {
+        left: -10px;
+    }
+
+    .container-habilidades {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card-habilidades {
+        width: 250px;
+    }
+}
+
+@media (max-width: 420) {
+
+    .card-projetos {
+        min-width: 250px;
+    }
+
+    .btn-scroll {
+        display: none; /* remove botões no celular */
+    }
+}
+
+@media (max-width: 420) {
+
+    .linha {
+        flex-direction: column;
+    }
+
+    .form-contato {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 420) {
+
+    .footer-container {
+        padding: 0 10px;
+    }
+
+    .icones-sociais {
+        flex-wrap: wrap;
+    }
 }
