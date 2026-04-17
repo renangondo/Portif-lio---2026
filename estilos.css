@@ -23,6 +23,11 @@
 
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -77,14 +82,14 @@ header {
     padding: 20px 60px;
     background: rgba(11, 29, 38, 0, 8);
     backdrop-filter: blur(10px);
-    z-index: 1000;
+    z-index: 500;
 
 }
 
 .nome {
     margin-left: 30px;
     font-size: 2.5rem;
-    color: black;
+    color: var(--texto-principal);
     font-weight: 500px;
 
 
@@ -121,10 +126,11 @@ header {
 /*##################CONTEUDO HOME#################################*/
 
 #home {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     background-color: #0b1d26;
-    color: aliceblue;
-    padding: 0 80px;
+    color: var(--texto-principal);
+    padding: 0 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -590,15 +596,16 @@ header {
 
 .copyright {
     font-size: 12px;
-    color: #888;
+    color:var(--texto-secundario);
 }
 
 
+/*Resposividade*/
 
 
+@media (max-width: 600px) {
 
-@media (max-width: 768px) {
-
+    /* HEADER */
     .cabecalho {
         flex-direction: column;
         padding: 10px;
@@ -615,169 +622,58 @@ header {
     .link-menu {
         font-size: 14px;
     }
-}
 
-@media (max-width: 768px) {
+    /* HOME */
 
     #home {
         flex-direction: column;
         text-align: center;
-        padding: 40px 20px;
+        padding: 100px 20px 40px;
+        height: auto;
+    }
+
+    .contato-button {
+        font-size: 15px;
+        width: 120px;
     }
 
     .conteudo-home {
         max-width: 100%;
+        
     }
 
     .titulo-nome {
-        font-size: 40px;
+        font-size: 32px;
     }
 
     .conteudo-home h2 {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .conteudo-home p {
+        font-size: 14px;
     }
 
     .foto-perfil {
-        width: 250px;
+        width: 200px;
+        /* CORRIGIDO */
         margin-top: 20px;
     }
 
     .contato-home {
         justify-content: center;
         flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 936) {
-
-    .paragrafo-sobre {
-        padding: 0 15px;
-        font-size: 14px;
-    }
-
-    .foto-sobre {
-        width: 180px;
-        height: 180px;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .timeline::before {
-        left: 0;
-    }
-
-    .card {
-        margin-left: 10px;
-    }
-
-    .card::before {
-        left: -10px;
-    }
-
-    .container-habilidades {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .card-habilidades {
-        width: 250px;
-    }
-}
-
-@media (max-width: 936) {
-
-    .card-projetos {
-        min-width: 250px;
-    }
-
-    .btn-scroll {
-        display: none; /* remove botões no celular */
-    }
-}
-
-@media (max-width: 936) {
-
-    .linha {
-        flex-direction: column;
-    }
-
-    .form-contato {
-        padding: 0 10px;
-    }
-}
-
-@media (max-width: 936) {
-
-    .footer-container {
-        padding: 0 10px;
-    }
-
-    .icones-sociais {
-        flex-wrap: wrap;
-    }
-}
-
-
-/*------------*/
-
-@media (max-width: 420) {
-
-    .cabecalho {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .menu {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
         gap: 10px;
-        margin: 10px 0;
     }
 
-    .link-menu {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 420) {
-
-    #home {
-        flex-direction: column;
-        text-align: center;
+    /* SOBRE */
+    #sobre {
+        margin-top: 40px;
         padding: 40px 20px;
     }
 
-    .conteudo-home {
-        max-width: 100%;
-    }
-
-    .titulo-nome {
-        font-size: 40px;
-    }
-
-    .conteudo-home h2 {
-        font-size: 20px;
-    }
-
-    .foto-perfil {
-        width: 250px;
-        margin-top: 20px;
-    }
-
-    .contato-home {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 420) {
-
     .paragrafo-sobre {
-        padding: 0 15px;
+        padding: 0 10px;
         font-size: 14px;
     }
 
@@ -785,10 +681,8 @@ header {
         width: 180px;
         height: 180px;
     }
-}
 
-@media (max-width: 420) {
-
+    /* EDUCAÇÃO */
     .timeline::before {
         left: 0;
     }
@@ -801,31 +695,26 @@ header {
         left: -10px;
     }
 
+    /* HABILIDADES */
     .container-habilidades {
-        display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
     }
 
     .card-habilidades {
-        width: 250px;
+        width: 100%;
+        max-width: 300px;
     }
-}
 
-@media (max-width: 420) {
-
+    /* PROJETOS */
     .card-projetos {
         min-width: 250px;
     }
 
     .btn-scroll {
-        display: none; /* remove botões no celular */
+        display: none;
     }
-}
 
-@media (max-width: 420) {
-
+    /* CONTATO */
     .linha {
         flex-direction: column;
     }
@@ -833,10 +722,8 @@ header {
     .form-contato {
         padding: 0 10px;
     }
-}
 
-@media (max-width: 420) {
-
+    /* FOOTER */
     .footer-container {
         padding: 0 10px;
     }

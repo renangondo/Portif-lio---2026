@@ -1,4 +1,4 @@
-// Efeito de rolagem tipo Netflix.
+// Efeito de rolagem .
 const container = document.querySelector('.main-projetos');
 const btnLeft = document.querySelector('.btn-scroll.left');
 const btnRight = document.querySelector('.btn-scroll.right');
@@ -19,7 +19,7 @@ btnLeft.addEventListener('click', () => {
     });
 });
 
-// Efeito de animação
+//Efeito animação
 
 const elementos = document.querySelectorAll('.animar');
 
@@ -52,6 +52,22 @@ function enviarWhatsApp(event) {
     window.open(url, '_blank')
 
 }
+
+
+const btnTema = document.getElementById("btnTema");
+
+btnTema.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    // troca ícone
+    if (document.body.classList.contains("light-mode")) {
+        btnTema.textContent = "☀️";
+        localStorage.setItem("tema", "light");
+    } else {
+        btnTema.textContent = "🌙";
+        localStorage.setItem("tema", "dark");
+    }
+});
 
 
 
