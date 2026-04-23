@@ -54,4 +54,17 @@ function enviarWhatsApp(event) {
 }
 
 
+// menu hamburguer
 
+const menuToggle = document.getElementById("menuToggle");
+const menu = document.querySelector(".menu");
+
+menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("ativo");
+});
+
+document.querySelectorAll(".link-menu").forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("ativo");
+    });
+});

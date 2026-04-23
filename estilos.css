@@ -75,7 +75,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-    background: rgba(11, 29, 38, 0, 8);
+    background: rgba(11, 29, 38, 0.8);
     backdrop-filter: blur(10px);
     z-index: 1000;
 
@@ -84,17 +84,24 @@ header {
 .nome {
     margin-left: 30px;
     font-size: 2.5rem;
-    color: black;
-    font-weight: 500px;
+    color: var(--texto-principal);
+    font-weight: 500;
+}
 
-
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
     font-size: 1.7rem;
     font-weight: 500;
     margin-left: 5rem;
-    padding: 30px;
+    padding: 0;
 
 }
 
@@ -128,12 +135,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 #home:before {
     content: "";
-    position: relative;
+    position: absolute;
     inset: 0;
+    z-index: 0;
 
     background: linear-gradient(to right,
             var(--bg-principal) 60%,
@@ -149,6 +158,12 @@ header {
     font-size: 100px;
     margin-bottom: 20px;
     padding-bottom: 50px;
+}
+
+.conteudo-home,
+.foto-perfil {
+    position: relative;
+    z-index: 1;
 }
 
 .foto-perfil {
@@ -594,61 +609,11 @@ header {
 }
 
 
+/*#####################################################*/
 
 
-
-@media (max-width: 768px) {
-
-    .cabecalho {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .menu {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        margin: 10px 0;
-    }
-
-    .link-menu {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 768px) {
-
-    #home {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    .conteudo-home {
-        max-width: 100%;
-    }
-
-    .titulo-nome {
-        font-size: 40px;
-    }
-
-    .conteudo-home h2 {
-        font-size: 20px;
-    }
-
-    .foto-perfil {
-        width: 250px;
-        margin-top: 20px;
-    }
-
-    .contato-home {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 936) {
+/* ================= TABLET E MOBILE ================= */
+@media (max-width: 936px) {
 
     .paragrafo-sobre {
         padding: 0 15px;
@@ -659,10 +624,140 @@ header {
         width: 180px;
         height: 180px;
     }
+
+    .card-projetos {
+        min-width: 250px;
+    }
+
+    .btn-scroll {
+        display: none;
+    }
+
+    .linha {
+        flex-direction: column;
+    }
+
+    .form-contato {
+        padding: 0 10px;
+    }
+
+    .footer-container {
+        padding: 0 10px;
+    }
+
+    .icones-sociais {
+        flex-wrap: wrap;
+    }
 }
 
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
+    header {
+        backdrop-filter: none;
+        background: var(--bg-principal);
+    }
+
+    .cabecalho {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .nome {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1200;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 75%;
+        max-width: 280px;
+        height: 40vh;
+        background: var(--bg-secundario);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 22px;
+        padding: 90px 25px 25px;
+        transition: left 0.3s ease;
+        z-index: 1100;
+        margin-left: 0;
+    }
+
+    .menu.ativo {
+        left: 0;
+    }
+
+    .link-menu {
+        margin-left: 0;
+        font-size: 24px;
+    }
+
+    /* HOME */
+    #home {
+        min-height: 100vh;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 100px 20px 40px;
+    }
+
+    #home::before {
+        display: none;
+    }
+
+    .conteudo-home {
+        max-width: 100%;
+    }
+
+    .titulo-nome {
+        font-size: 40px;
+        padding-bottom: 20px;
+    }
+
+    .conteudo-home h2 {
+        font-size: 20px;
+    }
+
+    .conteudo-home p {
+        font-size: 15px;
+        padding-bottom: 20px;
+    }
+
+    .foto-perfil {
+        width: 210px;
+        margin-top: 20px;
+    }
+
+    .contato-home {
+        display: grid;
+        justify-content: center;
+    }
+
+    .container-icone {
+        margin-left: -33px;
+        margin-top: 50px;
+    }
+
+    /* EDUCAÇÃO */
     .timeline::before {
         left: 0;
     }
@@ -675,11 +770,9 @@ header {
         left: -10px;
     }
 
+    /* HABILIDADES */
     .container-habilidades {
-        display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
     }
 
     .card-habilidades {
@@ -687,161 +780,39 @@ header {
     }
 }
 
-@media (max-width: 936) {
 
-    .card-projetos {
-        min-width: 250px;
-    }
-
-    .btn-scroll {
-        display: none; /* remove botões no celular */
-    }
-}
-
-@media (max-width: 936) {
-
-    .linha {
-        flex-direction: column;
-    }
-
-    .form-contato {
-        padding: 0 10px;
-    }
-}
-
-@media (max-width: 936) {
-
-    .footer-container {
-        padding: 0 10px;
-    }
-
-    .icones-sociais {
-        flex-wrap: wrap;
-    }
-}
-
-
-/*------------*/
-
-@media (max-width: 420) {
-
-    .cabecalho {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .menu {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        margin: 10px 0;
-    }
-
-    .link-menu {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 420) {
-
-    #home {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    .conteudo-home {
-        max-width: 100%;
-    }
+/* ================= CELULARES PEQUENOS ================= */
+@media (max-width: 420px) {
 
     .titulo-nome {
-        font-size: 40px;
+        font-size: 32px;
     }
 
     .conteudo-home h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .foto-perfil {
-        width: 250px;
-        margin-top: 20px;
+        width: 190px;
     }
-
-    .contato-home {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 420) {
 
     .paragrafo-sobre {
-        padding: 0 15px;
-        font-size: 14px;
+        padding: 0 10px;
+        font-size: 13px;
     }
 
     .foto-sobre {
-        width: 180px;
-        height: 180px;
-    }
-}
-
-@media (max-width: 420) {
-
-    .timeline::before {
-        left: 0;
+        width: 150px;
+        height: 150px;
     }
 
-    .card {
-        margin-left: 10px;
+    .menu {
+        width: 80%;
+        max-width: none;
+        padding: 85px 20px 20px;
     }
 
-    .card::before {
-        left: -10px;
-    }
-
-    .container-habilidades {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .card-habilidades {
-        width: 250px;
-    }
-}
-
-@media (max-width: 420) {
-
-    .card-projetos {
-        min-width: 250px;
-    }
-
-    .btn-scroll {
-        display: none; /* remove botões no celular */
-    }
-}
-
-@media (max-width: 420) {
-
-    .linha {
-        flex-direction: column;
-    }
-
-    .form-contato {
-        padding: 0 10px;
-    }
-}
-
-@media (max-width: 420) {
-
-    .footer-container {
-        padding: 0 10px;
-    }
-
-    .icones-sociais {
-        flex-wrap: wrap;
+    .link-menu {
+        font-size: 18px;
     }
 }
