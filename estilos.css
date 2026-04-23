@@ -368,8 +368,8 @@ img {
 #projetos {
     background-color: var(--bg-principal);
     padding: 70px 0;
-    border-bottom: 1px solid var(--cor-primaria);
     border-top: 1px solid var(--cor-primaria);
+    border-bottom: 1px solid var(--cor-primaria);
 }
 
 #projetos h1 {
@@ -383,6 +383,32 @@ img {
     position: relative;
 }
 
+/* CONTAINER DOS CARDS */
+.main-projetos {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding: 20px 40px;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    cursor: grab;
+}
+
+.main-projetos:active {
+    cursor: grabbing;
+}
+
+.main-projetos::-webkit-scrollbar {
+    display: none;
+}
+
+.main-projetos a {
+    text-decoration: none;
+    color: inherit;
+    flex-shrink: 0;
+}
+
+/* BOTÕES */
 .btn-scroll {
     position: absolute;
     top: 50%;
@@ -410,26 +436,10 @@ img {
     transform: translateY(-50%) scale(1.1);
 }
 
-.main-projetos {
-    display: flex;
-    gap: 25px;
-    overflow-x: auto;
-    padding: 20px 40px;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    cursor: grab;
-}
-
-.main-projetos:active {
-    cursor: grabbing;
-}
-
-.main-projetos::-webkit-scrollbar {
-    display: none;
-}
-
+/* CARD */
 .card-projetos {
     min-width: 350px;
+    max-width: 350px;
     flex-shrink: 0;
     background: linear-gradient(145deg, #112d3b, #0b1d26);
     border-radius: 12px;
@@ -440,7 +450,7 @@ img {
 }
 
 .card-projetos:hover {
-    transform: scale(1.05);
+    transform: translateY(-6px);
     box-shadow: 0 0 25px rgba(0, 188, 212, 0.5);
 }
 
@@ -449,21 +459,25 @@ img {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .card-projetos h3 {
     color: var(--cor-primaria);
     margin-bottom: 8px;
+    font-size: 22px;
 }
 
 .card-projetos p {
     font-size: 14px;
     color: var(--texto-secundario);
+    line-height: 1.6;
 }
 
-.main-projetos a {
-    color: inherit;
+.card-info-extra {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--texto-secundario);
 }
 
 /* CONTATOS */
