@@ -16,10 +16,12 @@
     <div class="container-principal">
         <header class="cabecalho">
             <a href="#" class="nome">Renan.</a>
-            <div class="menu-toggle" id="menuToggle">
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
                 ☰
-            </div>
-            <nav class="menu">
+            </button>
+
+            <nav class="menu" id="menuNav">
                 <a href="#home" class="link-menu">Home</a>
                 <a href="#sobre" class="link-menu">Sobre</a>
                 <a href="#educacao" class="link-menu">Educação</a>
@@ -28,21 +30,25 @@
                 <a href="#contatos" class="link-menu">Contatos</a>
             </nav>
         </header>
+
+        <div class="overlay-menu" id="overlayMenu"></div>
+
         <!-- PAGINA HOME -->
-        <div id="home">
+        <section id="home">
             <div class="conteudo-home animar esquerda">
                 <h1 class="titulo-nome">Olá, eu sou o Renan</h1>
-                <h2>Desenvolvedor em ascessão</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, quidem suscipit numquam
-                    accusamus
-                    est soluta vero consequatur optio repudiandae quia repellendus a tempore cupiditate repellat
-                    blanditiis
-                    saepe tenetur laborum ipsum.
+                <h2>Desenvolvedor em ascensão</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, quidem suscipit numquam
+                    accusamus est soluta vero consequatur optio repudiandae quia repellendus a tempore cupiditate
+                    repellat blanditiis saepe tenetur laborum ipsum.
                 </p>
+
                 <div class="contato-home">
                     <a href="#contatos">
                         <button class="contato-button">Fale Comigo</button>
                     </a>
+
                     <div class="container-icone">
                         <a class="icones-home" href="https://github.com/renangondo" target="_blank" aria-label="GitHub">
                             <i class="fab fa-github"></i>
@@ -57,62 +63,50 @@
                         </a>
                     </div>
                 </div>
-
             </div>
-            <img src="img/ImgPerfil/foto-perfil.png" alt="Minha-Foto" class="foto-perfil foto-perfil animar direita">
-        </div>
+
+            <img src="img/ImgPerfil/foto-perfil.png" alt="Minha foto" class="foto-perfil animar direita">
+        </section>
+
         <!-- PAGINA SOBRE -->
-        <div id="sobre">
+        <section id="sobre">
             <h1 class="titulo-sobre animar">Sobre</h1>
-            <img src="img/ImgPerfil/foto-perfil.png" alt="Minha Foto" class="foto-sobre animar direita">
-            <h2 class="subtitulo-sobre">Desenvolvedor em ascenssão</h2>
-            <p class="paragrafo-sobre animar direita">Olá, meu nome é Renan. Atualmente estou no último ano do curso de
-                Engenharia de
-                Software no Instituto
-                Federal do Paraná(IFPR). Estou sempre em busca de evoluir profissionalmente e adquirir novos
-                conhecimentos na área de
-                tecnologia.No momento, estou focado nos estudos de desenvolvimento Front-end, com o objetivo de me
-                tornar um
-                profissional cada vez mais qualificado e relevante no mercado de trabalho. Tenho grande interesse em
-                aprender novas
-                tecnologias e enfrentardesafios que contribuam para o meu crescimento profissional.Tenho 25 anos e
-                atualmente
-                trabalho como suporte técnico em um provedor de internet, onde adquiri experiência naresolução de
-                problemas,
-                atendimento ao cliente e suporte em infraestrutura de redes.Meu objetivo é conquistar uma oportunidade
-                na área de
-                desenvolvimento de software, onde eu possa aplicar meusconhecimentos, continuar aprendendo e desenvolver
-                ainda mais
-                minha experiência profissional.
+            <img src="img/ImgPerfil/foto-perfil.png" alt="Minha foto" class="foto-sobre animar direita">
+            <h2 class="subtitulo-sobre">Desenvolvedor em ascensão</h2>
+            <p class="paragrafo-sobre animar direita">
+                Olá, meu nome é Renan e estou no último ano de Engenharia de Software no IFPR. Tenho foco em
+                desenvolvimento Front-end e busco constantemente evoluir na área de tecnologia.
+                Atualmente trabalho como suporte técnico, onde adquiri experiência em resolução de problemas e
+                atendimento ao cliente.
+                Meu objetivo é ingressar na área de desenvolvimento de software e continuar crescendo profissionalmente.
             </p>
-        </div>
-        <!-- PAGINA EDUCAÇÂO -->
-        <div id="educacao">
+        </section>
+
+        <!-- PAGINA EDUCAÇÃO -->
+        <section id="educacao">
             <h1 class="titulo-jornada">Minha Jornada</h1>
 
             <div class="jornada-educacao">
                 <h3 class="titulo-educacao">Educação</h3>
 
                 <div class="timeline">
-
                     <div class="card animar esquerda">
                         <span class="data">2010 - 2018</span>
                         <h3>Ensino Médio - Fundação Bradesco.</h3>
-                        <p>Efetuei todo o meu ensino médio na escola Fundação Bradesco...</p>
+                        <p>Efetuei todo o meu ensino médio na escola Fundação Bradesco.</p>
                     </div>
 
                     <div class="card animar direita">
                         <span class="data">2019 - 2026</span>
                         <h3>Faculdade - IFPR</h3>
-                        <p>Curso de Engenharia de Software...</p>
+                        <p>Curso de Engenharia de Software.</p>
                     </div>
 
                     <div class="card animar esquerda">
                         <span class="data">2016 - 2018</span>
                         <h3>SENAC</h3>
-                        <p>Fiz um curso de programador de sistema.</p>
+                        <p>Fiz um curso de Programador de Sistemas.</p>
                     </div>
-
                 </div>
             </div>
 
@@ -120,7 +114,6 @@
                 <h3 class="titulo-profissional">Profissão</h3>
 
                 <div class="timeline">
-
                     <div class="card animar direita">
                         <span class="data">2020 - 2021</span>
                         <h3>Prefeitura Municipal</h3>
@@ -129,8 +122,8 @@
 
                     <div class="card animar esquerda">
                         <span class="data">2021 - 2023</span>
-                        <h3>Zanoni equipamentos</h3>
-                        <p>Trabalhei como torneiro em um torno CNC. </p>
+                        <h3>Zanoni Equipamentos</h3>
+                        <p>Trabalhei como torneiro em um torno CNC.</p>
                     </div>
 
                     <div class="card animar direita">
@@ -138,230 +131,129 @@
                         <h3>Solução NetWork</h3>
                         <p>Suporte técnico de uma provedora de internet.</p>
                     </div>
-
                 </div>
             </div>
-        </div>
-        <!-- PAGINA DE HABILIDADES -->
-        <div id="habilidades">
+        </section>
 
+        <!-- PAGINA DE HABILIDADES -->
+        <section id="habilidades">
             <h1>Habilidades</h1>
 
             <div class="container-habilidades">
-
                 <div class="card-habilidades animar">
-                    <img src="img/imgHabilidades/htmlIcon.png" alt="Icone Html" class="img-habilidades">
-                    <p>Linguagem de marcação utilizada para estruturar páginas web, organizando conteúdos como textos,
-                        imagens e links.</p>
+                    <img src="img/imgHabilidades/htmlIcon.png" alt="Ícone HTML" class="img-habilidades">
+                    <p>HTML.</p>
                 </div>
 
                 <div class="card-habilidades animar">
-                    <img src="img/imgHabilidades/cssIcone.png" alt="Icone CSS" class="img-habilidades">
-                    <p>Responsável pela estilização das páginas, permitindo criar layouts modernos, responsivos e
-                        visualmente atraentes.</p>
+                    <img src="img/imgHabilidades/cssIcone.png" alt="Ícone CSS" class="img-habilidades">
+                    <p>CSS.</p>
                 </div>
 
                 <div class="card-habilidades animar">
-                    <img src="img/imgHabilidades/jsIcone.png" alt="Icone JS" class="img-habilidades">
-                    <p>Linguagem de programação que adiciona interatividade às páginas web, manipulando eventos, dados e
-                        elementos em tempo real.</p>
+                    <img src="img/imgHabilidades/jsIcone.png" alt="Ícone JS" class="img-habilidades">
+                    <p>JavaScript.</p>
                 </div>
 
                 <div class="card-habilidades animar">
-                    <img src="img/imgHabilidades/React-icon.svg.png" alt="Icone React" class="img-habilidades">
-                    <p>Framework web em Python que facilita a criação de aplicações robustas, seguras e escaláveis,
-                        seguindo
-                        o padrão MVT..</p>
+                    <img src="img/imgHabilidades/React-icon.svg.png" alt="Ícone React" class="img-habilidades">
+                    <p>Biblioteca JavaScript.</p>
                 </div>
 
                 <div class="card-habilidades animar">
-                    <img src="img/imgHabilidades/pythonIcone.png" alt="Icone Python" class="img-habilidades">
-                    <p>Linguagem versátil e de fácil leitura, utilizada para desenvolvimento backend, automações e
-                        manipulação de dados.</p>
+                    <img src="img/imgHabilidades/pythonIcone.png" alt="Ícone Python" class="img-habilidades">
+                    <p>Python.</p>
                 </div>
 
                 <div class="card-habilidades animar">
-                    <img src="img/imgHabilidades/djIcone.png" alt="Icone Django" class="img-habilidades">
-                    <p>Framework web em Python que facilita a criação de aplicações robustas, seguras e escaláveis,
-                        seguindo
-                        o padrão MVT..</p>
+                    <img src="img/imgHabilidades/djIcone.png" alt="Ícone Django" class="img-habilidades">
+                    <p>Framework web em Python.</p>
                 </div>
             </div>
-        </div>
-        <!-- PAGINA DE Projetos -->
-        <div id="projetos">
+        </section>
+
+        <!-- PAGINA DE PROJETOS -->
+        <section id="projetos">
             <h1>PROJETOS</h1>
 
             <div class="container-projetos">
-                <button class="btn-scroll left">❮</button>
+                <button class="btn-scroll left" aria-label="Projetos anteriores">❮</button>
+
                 <div class="main-projetos">
-
-                    <a href="https://github.com/renangondo/Starbucks---Site">
+                    <a href="https://github.com/renangondo/Starbucks---Site" target="_blank">
                         <div class="card-projetos animar">
-                            <img src="/img/imgProjetos/starbuckss.jpeg" alt="Imagem 1">
+                            <img src="img/imgProjetos/starbuckss.jpeg" alt="Projeto Starbucks">
                             <h3>Starbucks</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime vitae rem minima earum
-                                neque
-                                aliquid aliquam,
-                                fugiat ratione necessitatibus beatae repudiandae voluptates velit pariatur animi
-                                repellat atque doloremque? Optio, voluptates!
+                            <p>Projeto de landing page com foco em responsividade, estruturação visual e apresentação de
+                                produto.</p>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/renangondo/Starbucks---Site" target="_blank">
+                        <div class="card-projetos animar">
+                            <img src="img/imgProjetos/cinema.jpg" alt="Projeto Cinema">
+                            <h3>Cinema</h3>
+                            <p>Interface de site voltada para exibição de filmes, com design limpo e navegação simples.
                             </p>
                         </div>
                     </a>
 
-                    <a href="https://github.com/renangondo/Starbucks---Site">
+                    <a href="https://github.com/renangondo/Starbucks---Site" target="_blank">
                         <div class="card-projetos animar">
-                            <img src="img/imgProjetos/cinema.jpg" alt="Imagem 1">
-                            <h3>Starbucks</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime vitae rem minima earum
-                                neque
-                                aliquid aliquam,
-                                fugiat ratione necessitatibus beatae repudiandae voluptates velit pariatur animi
-                                repellat atque doloremque? Optio, voluptates!
-                            </p>
+                            <img src="img/imgProjetos/ConversorMoedas.png" alt="Projeto Conversor de Moedas">
+                            <h3>Conversor de Moedas</h3>
+                            <p>Aplicação interativa para conversão de valores entre moedas, com foco em lógica e
+                                usabilidade.</p>
                         </div>
                     </a>
 
-                    <a href="https://github.com/renangondo/Starbucks---Site">
+                    <a href="https://github.com/renangondo/Starbucks---Site" target="_blank">
                         <div class="card-projetos animar">
-                            <img src="img/imgProjetos/ConversorMoedas.png" alt="Imagem 1">
-                            <h3>Starbucks</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime vitae rem minima
-                                earum neque
-                                aliquid aliquam,
-                                fugiat ratione necessitatibus beatae repudiandae voluptates velit pariatur animi
-                                repellat atque doloremque? Optio, voluptates!
-                            </p>
+                            <img src="img/imgProjetos/toDoList.png" alt="Projeto To Do List">
+                            <h3>To Do List</h3>
+                            <p>Lista de tarefas com gerenciamento de itens e organização prática para o dia a dia.</p>
                         </div>
                     </a>
 
-
-
-                    <a href="https://github.com/renangondo/Starbucks---Site">
+                    <a href="https://github.com/renangondo/Starbucks---Site" target="_blank">
                         <div class="card-projetos animar">
-                            <img src="img/imgProjetos/toDoList.png" alt="Imagem 1">
-                            <h3>Starbucks</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime vitae rem minima
-                                earum neque
-                                aliquid aliquam,
-                                fugiat ratione necessitatibus beatae repudiandae voluptates velit pariatur animi
-                                repellat atque doloremque? Optio, voluptates!
-                            </p>
+                            <img src="img/imgProjetos/jogoMemoria.png" alt="Projeto Jogo da Memória">
+                            <h3>Jogo da Memória</h3>
+                            <p>Projeto com foco em interação, manipulação do DOM e experiência do usuário.</p>
                         </div>
                     </a>
-
-
-
-                    <a href="https://github.com/renangondo/Starbucks---Site">
-                        <div class="card-projetos animar">
-                            <img src="img/imgProjetos/starbuckss.jpeg" alt="Imagem 1">
-                            <h3>Starbucks</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime vitae rem
-                                minima earum neque
-                                aliquid aliquam,
-                                fugiat ratione necessitatibus beatae repudiandae voluptates velit pariatur
-                                animi
-                                repellat atque doloremque? Optio, voluptates!
-                            </p>
-                        </div>
-                    </a>
-
-
-                    <a href="https://github.com/renangondo/Starbucks---Site">
-                        <div class="card-projetos animar">
-                            <img src="img/imgProjetos/cinema.jpg" alt="Imagem 1">
-                            <h3>Starbucks</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime vitae
-                                rem minima earum neque
-                                aliquid aliquam,
-                                fugiat ratione necessitatibus beatae repudiandae voluptates velit
-                                pariatur animi
-                                repellat atque doloremque? Optio, voluptates!
-                            </p>
-                        </div>
-                    </a>
-
-
-                    <a href="https://github.com/renangondo/Starbucks---Site">
-                        <div class="card-projetos animar">
-                            <img src="img/imgProjetos/ConversorMoedas.png" alt="Imagem 1">
-                            <h3>Starbucks</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime
-                                vitae rem minima earum neque
-                                aliquid aliquam,
-                                fugiat ratione necessitatibus beatae repudiandae voluptates velit
-                                pariatur animi
-                                repellat atque doloremque? Optio, voluptates!
-                            </p>
-                        </div>
-                    </a>
-
-                    <a href="https://github.com/renangondo/Starbucks---Site">
-                        <div class="card-projetos animar">
-                            <img src="img/imgProjetos/jogoMemoria.png" alt="Imagem 1">
-                            <h3>Starbucks</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime
-                                vitae rem minima earum neque
-                                aliquid aliquam,
-                                fugiat ratione necessitatibus beatae repudiandae voluptates velit
-                                pariatur animi
-                                repellat atque doloremque? Optio, voluptates!
-                            </p>
-                        </div>
-                    </a>
-
-                    <a href="https://github.com/renangondo/Starbucks---Site">
-                        <div class="card-projetos animar">
-                            <img src="img/imgProjetos/toDoList.png" alt="Imagem 1">
-                            <h3>Starbucks</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime
-                                vitae rem minima earum neque
-                                aliquid aliquam,
-                                fugiat ratione necessitatibus beatae repudiandae voluptates velit
-                                pariatur animi
-                                repellat atque doloremque? Optio, voluptates!
-                            </p>
-                        </div>
-                    </a>
-
                 </div>
-                <button class="btn-scroll right">❯</button>
 
+                <button class="btn-scroll right" aria-label="Próximos projetos">❯</button>
             </div>
+        </section>
 
-
-        </div>
-
-        <!-- PAGINA de contatos -->
-        <div id="contatos">
+        <!-- PAGINA DE CONTATOS -->
+        <section id="contatos">
             <h1>Contato</h1>
 
             <form class="form-contato animar" onsubmit="enviarWhatsApp(event)">
                 <div class="linha">
-                    <input type="text" placeholder="Seu nome" id="nome">
+                    <input type="text" placeholder="Seu nome" id="nome" required>
                     <input type="email" placeholder="E-mail">
                 </div>
 
                 <div class="linha">
                     <input type="text" placeholder="Celular">
                     <input type="text" placeholder="Assunto">
-
                 </div>
 
-                <textarea placeholder="Sua mensagem" id="mensagem"></textarea>
+                <textarea placeholder="Sua mensagem" id="mensagem" required></textarea>
 
                 <button type="submit">Enviar</button>
-
             </form>
-        </div>
+        </section>
+
         <!-- RODAPÉ -->
-
         <footer class="footer">
-
             <div class="footer-container">
-
                 <h2 class="footer-nome">Renan Gondo</h2>
-                <p class="footer-desc">Desenvolvedor em ascenssão</p>
+                <p class="footer-desc">Desenvolvedor em ascensão</p>
 
                 <div class="icones-sociais">
                     <a href="https://www.facebook.com/renan.gondo/" target="_blank" aria-label="Facebook">
@@ -381,7 +273,9 @@
 
             <p class="copyright">© 2025 Renan Gondo. Todos os direitos reservados.</p>
         </footer>
-        <script src="/index.js"></script>
+    </div>
+
+    <script src="index.js"></script>
 </body>
 
 </html>

@@ -1,26 +1,27 @@
-// Efeito de rolagem .
+// ROLAGEM DOS PROJETOS
 const container = document.querySelector('.main-projetos');
 const btnLeft = document.querySelector('.btn-scroll.left');
 const btnRight = document.querySelector('.btn-scroll.right');
 
-const scrollAmount = 400; // quanto vai andar
+if (container && btnLeft && btnRight) {
+    const scrollAmount = 400;
 
-btnRight.addEventListener('click', () => {
-    container.scrollBy({
-        left: scrollAmount,
-        behavior: 'smooth'
+    btnRight.addEventListener('click', () => {
+        container.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
     });
-});
 
-btnLeft.addEventListener('click', () => {
-    container.scrollBy({
-        left: -scrollAmount,
-        behavior: 'smooth'
+    btnLeft.addEventListener('click', () => {
+        container.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+        });
     });
-});
+}
 
-//Efeito animação
-
+// ANIMAÇÃO AO ROLAR
 const elementos = document.querySelectorAll('.animar');
 
 const observer = new IntersectionObserver((entries) => {
@@ -35,51 +36,41 @@ const observer = new IntersectionObserver((entries) => {
 
 elementos.forEach(el => observer.observe(el));
 
-// WhatsAPP
-
+// WHATSAPP
 function enviarWhatsApp(event) {
-    event.preventDefault()
+    event.preventDefault();
 
     const nome = document.getElementById('nome').value;
-    const mensagem = document.getElementById('mensagem');
-    const telefone = "5544998344855"
+    const mensagem = document.getElementById('mensagem').value;
+    const telefone = "5544998344855";
 
-    const texto = `Olá! me chamo ${nome}, ${mensagem}`
-    const msgFormatada = encodeURIComponent(texto)
+    const texto = `Olá! Me chamo ${nome}. ${mensagem}`;
+    const msgFormatada = encodeURIComponent(texto);
+    const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
 
-    const url = `https://wa.me/${telefone}?text=${msgFormatada}`
-
-    window.open(url, '_blank')
-
+    window.open(url, '_blank');
 }
 
-
-// menu hamburguer
-const btnTema = document.getElementById("btnTema");
-
-btnTema.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
-
-    // troca ícone
-    if (document.body.classList.contains("light-mode")) {
-        btnTema.textContent = "☀️";
-        localStorage.setItem("tema", "light");
-    } else {
-        btnTema.textContent = "🌙";
-        localStorage.setItem("tema", "dark");
-    }
-});
-
-
+// MENU HAMBÚRGUER
 const menuToggle = document.getElementById("menuToggle");
-const menu = document.querySelector(".menu");
+const menu = document.getElementById("menuNav");
+const overlayMenu = document.getElementById("overlayMenu");
 
-menuToggle.addEventListener("click", () => {
-    menu.classList.toggle("ativo");
-});
-
-document.querySelectorAll(".link-menu").forEach(link => {
-    link.addEventListener("click", () => {
-        menu.classList.remove("ativo");
+if (menuToggle && menu && overlayMenu) {
+    menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("ativo");
+        overlayMenu.classList.toggle("ativo");
     });
-});
+
+    document.querySelectorAll(".link-menu").forEach(link => {
+        link.addEventListener("click", () => {
+            menu.classList.remove("ativo");
+            overlayMenu.classList.remove("ativo");
+        });
+    });
+
+    overlayMenu.addEventListener("click", () => {
+        menu.classList.remove("ativo");
+        overlayMenu.classList.remove("ativo");
+    });
+}
